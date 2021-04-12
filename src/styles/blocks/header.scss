@@ -1,0 +1,108 @@
+.header {
+  position: relative;
+
+  height: 100vh;
+
+  background-image: url(../images/header.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__wrapper {
+    padding: 25px 120px 0;
+  }
+
+  &__top-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__check-box {
+    display: none;
+
+    &-label {
+      width: 24px;
+      height: 16px;
+      padding: 4px;
+
+      background-image: url(../images/icons/default_menu_icon.png);
+      background-repeat: no-repeat;
+      background-position: center;
+
+      cursor: pointer;
+
+      transition: background-image 0.7s;
+
+      &:hover {
+        background-image: url(../images/icons/hovering_menu_icon.png);
+        transition: background-image 0.7s;
+      }
+    }
+  }
+
+  &__logo {
+    width: 130px;
+    height: 75px;
+  }
+
+  &__phone {
+    position: relative;
+
+    height: 24px;
+    width: 24px;
+    padding: 4px;
+
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+
+    &::before {
+      position: absolute;
+      right: 44px;
+
+      width: max-content;
+
+      font-family: "Roboto", sans-serif;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 16px;
+      content: "+1 234 555-55-55";
+      color: #fff;
+
+      opacity: 0;
+
+      transition: opacity 0.7s;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 80px;
+
+    margin: 0;
+    padding: 0;
+
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 80px;
+    letter-spacing: -1.5px;
+    color: #fff;
+
+    &::before {
+      position: absolute;
+      top: -24px;
+
+      width: 40px;
+      height: 2px;
+
+      content: "";
+      background: #fff;
+      border-radius: 2px;
+    }
+  }
+}
