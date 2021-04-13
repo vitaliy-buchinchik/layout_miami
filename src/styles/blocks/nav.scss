@@ -1,0 +1,58 @@
+.nav {
+  padding: 150px 120px 0;
+
+  color: #fff;
+
+  &__list {
+    list-style: none;
+    color: #fff;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+    &:last-child {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__link {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 22px;
+    text-decoration: none;
+    color: #fff;
+
+    &:hover {
+      padding-bottom: 8px;
+      border-bottom: 1px solid #fff;
+    }
+  }
+
+  &__phone-number {
+    margin-bottom: 16px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 16px;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  &__call-link {
+    margin-bottom: 160px;
+    padding-bottom: 8px;
+
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 16px;
+
+    letter-spacing: 2px;
+    color: #fff;
+    text-decoration: none;
+
+    border-bottom: 1px solid #fff;
+  }
+}

@@ -1,0 +1,36 @@
+.about-us {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 104px;
+
+  &__title {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -1.5px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #0075ff;
+  }
+
+  &__info-title-link {
+    text-decoration: none;
+    color: #0075ff;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 30px;
+  }
+
+  &__text {
+    max-width: 500px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 27px;
+
+    &--bold {
+      font-weight: bold;
+    }
+  }
+}
