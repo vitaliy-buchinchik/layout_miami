@@ -1,12 +1,22 @@
 .header {
   position: relative;
-
   height: 100vh;
 
   background-image: url(../images/header.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  &__nav {
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0075ff;
+    z-index: 5;
+    transition: transform 0.7s, background-color 0.7s;
+  }
 
   &__wrapper {
     padding: 25px 120px 0;
@@ -18,7 +28,7 @@
     align-items: center;
   }
 
-  &__check-box {
+  &__menu-check-box {
     display: none;
 
     &-label {
@@ -39,11 +49,20 @@
         transition: background-image 0.7s;
       }
     }
+
+    &:checked + &-label {
+      background-image: url(../images/icons/closing_menu_icon.png);
+    }
+  }
+
+  &__menu-check-box:checked ~ &__nav {
+    transform: translateX(100vw);
   }
 
   &__logo {
     width: 130px;
     height: 75px;
+    z-index: 2;
   }
 
   &__phone {
