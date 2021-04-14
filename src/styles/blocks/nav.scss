@@ -1,11 +1,14 @@
 .nav {
   padding: 150px 120px 0;
+  @media (max-width: 767px) {
+    padding: 120px 20px 0;
+  }
 
-  color: #fff;
+  color: $default-white-color;
 
   &__list {
     list-style: none;
-    color: #fff;
+    color: $default-white-color;
   }
 
   &__item {
@@ -23,20 +26,20 @@
     font-weight: bold;
     line-height: 22px;
     text-decoration: none;
-    color: #fff;
+    color: $default-white-color;
 
     &:hover {
       padding-bottom: 8px;
-      border-bottom: 1px solid #fff;
+      border-bottom: 1px solid $default-white-color;
     }
   }
 
   &__phone-number {
     margin-bottom: 16px;
+
     font-size: 12px;
     font-weight: bold;
     line-height: 16px;
-
     letter-spacing: 2px;
     text-transform: uppercase;
   }
@@ -48,11 +51,10 @@
     font-size: 12px;
     font-weight: bold;
     line-height: 16px;
-
     letter-spacing: 2px;
-    color: #fff;
+    color: $default-white-color;
     text-decoration: none;
 
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid $default-white-color;
   }
 }

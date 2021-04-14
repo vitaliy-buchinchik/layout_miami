@@ -5,24 +5,35 @@
     display: flex;
     justify-content: space-between;
     align-items: start;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &__title {
-    font-size: 48px;
-    font-weight: bold;
-    line-height: 48px;
-    letter-spacing: -1.5px;
-    padding-bottom: 93px;
+    @media (max-width: 767px) {
+      padding-bottom: 53px;
+
+      font-size: 36px;
+      line-height: 36px;
+    }
+
     position: relative;
+    padding-bottom: 93px;
+
+    @extend %section-title-font-48px;
 
     &::after {
       position: absolute;
       top: 25px;
       left: calc(50% - 10px);
-      content: url(../images/icons/crown.svg);
       display: block;
       width: 20px;
       height: 10px;
+      content: url(../images/icons/crown.svg);
     }
   }
 
@@ -33,34 +44,49 @@
     flex-direction: column;
     margin-bottom: 152px;
 
+    @media (max-width: 767px) {
+      width: 100%;
+      &:not(:last-child) {
+        margin-bottom: 48px;
+      }
+
+      &:last-child {
+        margin-bottom: 64px;
+      }
+    }
+
     width: 240px;
 
     &-photo {
+      margin-bottom: 28px;
+
       width: 153px;
       height: 153px;
+
       border-radius: 50%;
-      margin-bottom: 28px;
     }
 
     &-name {
-      font-weight: bold;
-      font-size: 24px;
-      line-height: 30px;
-      color: #0075ff;
       margin-bottom: 4px;
+
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 30px;
+      color: $blue-link-color;
     }
 
     &-profession {
-      font-weight: normal;
+      margin-bottom: 13px;
+
       font-size: 14px;
+      font-weight: normal;
       line-height: 27px;
       color: #9fadc2;
-      margin-bottom: 13px;
     }
 
     &-comments {
-      font-weight: normal;
       font-size: 16px;
+      font-weight: normal;
       line-height: 27px;
       color: #3e3e3e;
     }

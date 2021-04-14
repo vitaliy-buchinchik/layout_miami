@@ -1,12 +1,17 @@
 .contacts {
   &__title {
-    text-align: center;
-    font-size: 48px;
-    font-weight: bold;
-    line-height: 48px;
-    padding-bottom: 93px;
-    letter-spacing: -1.5px;
+    @media (max-width: 767px) {
+      padding-bottom: 53px;
+
+      font-size: 36px;
+      line-height: 36px;
+    }
+
     position: relative;
+    padding-bottom: 93px;
+
+    @extend %section-title-font-48px;
+    text-align: center;
 
     &::after {
       position: absolute;
@@ -14,12 +19,21 @@
       left: calc(50% - 10px);
       content: url(../images/icons/crown.svg);
       display: block;
+
       width: 20px;
       height: 10px;
     }
   }
 
   &__info {
+    @media (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+      &:not(:first-child) {
+        margin-top: 24px;
+      }
+    }
+
     display: grid;
     justify-content: space-between;
     justify-items: center;
@@ -31,38 +45,47 @@
   }
 
   &__label {
-    font-weight: normal;
+    margin-bottom: 8px;
+
     font-size: 14px;
+    font-weight: normal;
     line-height: 27px;
     color: #9fadc2;
-    margin-bottom: 8px;
   }
 
   &__link {
-    text-decoration: none;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 27px;
-    color: #3e3e3e;
     margin-bottom: 24px;
+
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 27px;
+    text-decoration: none;
+    color: #3e3e3e;
+  }
+
+  @media (max-width: 767px) {
+    &__form:first-child {
+      margin-top: 32px;
+    }
   }
 
   &__input {
     box-sizing: border-box;
-    outline: none;
-    display: block;
     width: 100%;
     height: 48px;
+    display: block;
+
     background: #f7f8ff;
-    border: 1px solid #fff;
+    border: 1px solid $default-white-color;
     border-radius: 8px;
+    outline: none;
 
     &:hover {
       border: 2px solid #ccd0e0;
     }
 
     &:focus {
-      border: 2px solid #0075ff;
+      border: 2px solid $blue-link-color;
     }
 
     &:not(:last-child) {
@@ -70,40 +93,49 @@
     }
 
     &-area {
-      outline: none;
+      margin-bottom: 32px;
       width: 100%;
       height: 144px;
-      margin-bottom: 32px;
+
+      font-family: inherit;
+
       background: #f7f8ff;
-      border: 1px solid #fff;
+      border: 1px solid $default-white-color;
       border-radius: 8px;
+      outline: none;
 
       &:hover {
         border: 2px solid #ccd0e0;
       }
   
       &:focus {
-        border: 2px solid #0075ff;
+        border: 2px solid $blue-link-color;
       }
     }
   }
 
   &__button {
-    margin: 0 auto;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+
     display: block;
     box-sizing: border-box;
-    text-align: center;
-    font-weight: bold;
-    font-size: 16px;
-    color: #fff;
-    text-decoration: none;
+    margin: 0 auto 88px;
+
     width: 413px;
     height: 56px;
+
+    font-size: 16px;
+    font-weight: bold;
     line-height: 56px;
-    background: #0075ff;
+    text-align: center;
+    color: $default-white-color;
+    text-decoration: none;
+
+    background: $blue-link-color;
     box-shadow: 0 6px 23px rgba(0, 117, 255, 0.46);
     border-radius: 8px;
-    margin-bottom: 88px;
 
     &:hover {
       background: #005ecc;
