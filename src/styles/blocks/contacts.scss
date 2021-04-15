@@ -37,7 +37,8 @@
     display: grid;
     justify-content: space-between;
     justify-items: center;
-    grid-template-columns: 1fr 1fr 413px;
+    grid-template-columns: 28% 24% 1fr;
+    gap: 10px;
   }
 
   &__item {
@@ -66,14 +67,15 @@
 
   @media (max-width: 767px) {
     &__form:first-child {
-      margin-top: 32px;
+      margin-top: 12px;
     }
   }
 
   &__form {
-    margin-left: 10px;
+    margin: 0 10px;
     @media (max-width: 767px) {
       margin-left: 0;
+      margin-right: 0;
     }
   }
 
@@ -123,14 +125,14 @@
   }
 
   &__button {
-    @media (max-width: 767px) {
-      width: 100%;
-    }
+    // @media (max-width: 767px) {
+    //   width: 100%;
+    // }
 
     display: block;
     margin: 0 auto 88px;
 
-    width: 413px;
+    width: 100%;
     height: 56px;
 
     font-size: 16px;

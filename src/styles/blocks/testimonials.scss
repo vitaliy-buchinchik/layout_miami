@@ -5,6 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: start;
+    gap: 25px;
 
     @media (max-width: 767px) {
       flex-direction: column;
@@ -44,6 +45,8 @@
     flex-direction: column;
     margin-bottom: 152px;
 
+    width: 240px;
+
     @media (max-width: 767px) {
       width: 100%;
       &:not(:last-child) {
@@ -54,8 +57,6 @@
         margin-bottom: 64px;
       }
     }
-
-    width: 240px;
 
     &-photo {
       margin-bottom: 28px;
