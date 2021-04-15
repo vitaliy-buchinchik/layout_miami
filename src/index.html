@@ -13,7 +13,7 @@
     <script src="scripts/main.js" defer></script>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="home">
       <div class="header__top-part">
         <input
           class="header__menu-check-box"
@@ -24,7 +24,7 @@
         <label class="header__menu-check-box-label" for="menu"></label>
 
         <div class="header__logo">
-          <a href="#Home">
+          <a href="#home">
             <img
               src="./images/header_logo.png"
               alt="Header logo"
@@ -40,47 +40,47 @@
             >
           </a>
         </div>
-      </div>
 
-      <h1 class="header__title">
-        Miami<br>Condo Kings
-      </h1>
+        <h1 class="header__title">
+          Miami<br>Condo Kings
+        </h1>
+      </div>
 
       <nav class="nav header__nav">
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="#" class="nav__link">
+            <a href="#home" class="nav__link">
               HOME
             </a>
           </li>
 
           <li class="nav__item">
-            <a href="#" class="nav__link">
+            <a href="#about-us" class="nav__link">
               ABOUT US
             </a>
           </li>
 
           <li class="nav__item">
-            <a href="#" class="nav__link">
+            <a href="#gallery" class="nav__link">
               GALLERY
             </a>
           </li>
 
           <li class="nav__item">
-            <a href="#" class="nav__link">
-              CONSULTATION
-            </a>
-          </li>
-
-          <li class="nav__item">
-            <a href="#" class="nav__link">
+            <a href="#testimonials" class="nav__link">
               TESTIMONIALS
             </a>
           </li>
 
           <li class="nav__item">
-            <a href="#" class="nav__link">
+            <a href="#contacts" class="nav__link">
               CONTACTS
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#consultation" class="nav__link">
+              CONSULTATION
             </a>
           </li>
         </ul>
@@ -96,7 +96,10 @@
     </header>
 
     <main class="content">
-      <section class="about-us content__about-us">
+      <section
+        class="about-us content__about-us"
+        id="about-us"
+      >
         <h2 class="about-us__title">
           Miami best
           <br>
@@ -139,7 +142,10 @@
         </div>
       </section>
 
-      <section class="gallery content__galery">
+      <section
+        class="gallery content__galery"
+        id="gallery"
+      >
         <h2 class="gallery__title">
           Gallery
         </h2>
@@ -224,7 +230,10 @@
         </a>
       </section>
 
-      <section class="testimonials content__tesimonials">
+      <section
+        class="testimonials content__tesimonials"
+        id="testimonials"
+      >
         <h2 class="testimonials__title">
           Testimonials
         </h2>
@@ -297,7 +306,10 @@
         </div>
       </section>
 
-      <section class="contacts content__contacts">
+      <section
+        class="contacts content__contacts"
+        id="contacts"
+      >
         <h2 class="contacts__title">
           Contact us
         </h2>
@@ -339,7 +351,7 @@
             <form
               class="contacts__form"
               action="#444"
-              method="POST"
+              method="GET"
             >
               <input
                 class="contacts__input"
@@ -363,12 +375,12 @@
                 placeholder="Message"
              ></textarea>
 
-              <a
+              <button
                 class="contacts__button"
-                href="#456"
+                id="consultation"
               >
                 Consultation
-              </a>
+              </button>
             </form>
           </div>
         </div>
@@ -377,7 +389,7 @@
 
     <footer class="footer">
       <div class="footer__logo">
-        <a href="#Home">
+        <a href="#home">
           <img
             src="./images/header_logo.png"
             alt="Footer logo"
