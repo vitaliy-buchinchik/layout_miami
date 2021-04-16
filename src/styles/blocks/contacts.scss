@@ -124,10 +124,14 @@
     }
   }
 
+  [placeholder] {
+    padding: 15px;
+  }
+
   &__button {
-    // @media (max-width: 767px) {
-    //   width: 100%;
-    // }
+    @media (max-width: 767px) {
+      width: 100%;
+    }
 
     display: block;
     margin: 0 auto 88px;

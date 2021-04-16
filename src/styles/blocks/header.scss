@@ -20,6 +20,22 @@
     align-items: center;
   }
 
+  &__logo {
+    z-index: 2;
+    background-image: url(../images/header_logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    width: 130px;
+    height: 75px;
+
+    @media (max-width: 767px) {
+      width: 78px;
+      height: 46px;
+    }
+  }
+
   &__menu-check-box {
     display: none;
 
@@ -73,18 +89,6 @@
     }
   }
 
-  &__logo {
-    z-index: 2;
-
-    width: 130px;
-    height: 75px;
-
-    @media (max-width: 767px) {
-      width: 78px;
-      height: 46px;
-    }
-  }
-
   &__phone {
     position: relative;
 
@@ -135,6 +139,7 @@
       line-height: 40px;
       letter-spacing: -1 px;
     }
+
     position: absolute;
     bottom: 80px;
 
@@ -157,7 +162,6 @@
       content: "";
       background: $default-white-color;
       border-radius: 2px;
-
     }
   }
 }
