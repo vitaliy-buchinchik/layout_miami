@@ -1,7 +1,14 @@
-@import "utils";
-@import "fonts";
-@import "typography";
+@import "./reset.scss";
+@import "./normalize.scss";
 
-body {
-  background: $c-gray;
-}
+@import "./utils/_variables.scss";
+@import "./utils/_extends.scss";
+
+@import "./blocks/header";
+@import "./blocks/nav";
+@import "./blocks/content";
+@import "./blocks/about-us";
+@import "./blocks/gallery";
+@import "./blocks/testimonials";
+@import "./blocks/contacts";
+@import "./blocks/footer";
