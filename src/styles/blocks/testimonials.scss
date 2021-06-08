@@ -65,6 +65,12 @@
       height: 153px;
 
       border-radius: 50%;
+      transition: transform 1s;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+      }
     }
 
     &-name {
